@@ -32,6 +32,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 @Import(RepositoryRestMvcConfiguration.class)
 public class SampleDataRestApplication {
 //thisis test
+	//comment 2
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(SampleDataRestApplication.class, args);
 	}
