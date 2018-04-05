@@ -24,7 +24,7 @@ stages {
 					steps {
 	                sh 'Build docker image'
 	
-	                docker build . -t kirtikumar1982/kirtikumarr/helloworld:${env.BUILD_NUMBER}
+	                docker build -t kirtikumar1982/kirtikumarr/helloworld:${env.BUILD_NUMBER} .
 	
 	                sh 'build docker image step point2'
 					}
