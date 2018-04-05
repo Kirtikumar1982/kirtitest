@@ -24,8 +24,6 @@ stages {
 					steps {
 	                sh 'Build docker image'
 	
-	                #!/bin/bash
-	
 	                docker build . -t kirtikumar1982/kirtikumarr/helloworld:${env.BUILD_NUMBER}
 	
 	                sh 'build docker image step point2'
@@ -36,9 +34,7 @@ stages {
 				steps {
 	
 	                sh 'build docker image step point3'
-	
-	                #!/bin/bash
-	
+		
 	                set +x
 	
 	                docker login -u='kirtikumar1982' -p='Secure+800'
