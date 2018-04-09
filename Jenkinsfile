@@ -20,6 +20,20 @@ stages {
                }
             }
         }
+	
+	stage('Cleanup'){
+		steps{
+			sh 'email notification'
+		mail body: 'project build status',
+                     from: 'kirtikumar.ramteke@kpit.com',
+                     replyTo: 'kirtikumar.ramteke@kpit.com',
+                     subject: 'project build status',
+                     to: 'kirtikumar.ramteke@kpit.com'
+  
+      		
+		}
+ 		 }
+	
 	stage('Build Docker Image') {
 					steps {
 	                sh 'Build docker image'
@@ -50,19 +64,6 @@ stages {
 	                sh 'build docker image step point4 end'
 	            }
 				}
-	stage('Cleanup'){
-		steps{
-			sh 'email notification'
-		mail body: 'project build status',
-                     from: 'kirtikumar.ramteke@kpit.com',
-                     replyTo: 'kirtikumar.ramteke@kpit.com',
-                     subject: 'project build status',
-                     to: 'kirtikumar.ramteke@kpit.com'
-  
-      		//mail to: 'kirtikumar.ramteke@kpit.com',
-          	//subject: "Pipeline: ${currentBuild.fullDisplayName}",
-          	//body: "Something is build with ${env.BUILD_URL}"
-		}
- 		 }
+	
 	}
 }
