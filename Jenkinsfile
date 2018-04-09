@@ -41,7 +41,7 @@ stages {
 	
 	                set +x
 	
-	                docker login -u='kirtikumar1982' -p='Secure+800'
+	               // docker login -u='kirtikumar1982' -p='Secure+800'
 	
 	                set -x
 	
@@ -52,12 +52,12 @@ stages {
 				}
 	
 	post {
-    failure {
+    //failure {
       // notify users when the Pipeline fails
       mail to: 'kirtikumar.ramteke@kpit.com',
           subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
           body: "Something is wrong with ${env.BUILD_URL}"
-    }
+    //}
   }
 	}
 }
