@@ -45,7 +45,7 @@ stages {
 	
 	                set -x
 	
-	                docker push kirtikumar1982/kirtikumarr/helloworld:${env.BUILD_NUMBER}
+	                sh 'docker push kirtikumar1982/kirtikumarr/helloworld'
 	
 	                sh 'build docker image step point4 end'
 	            }
