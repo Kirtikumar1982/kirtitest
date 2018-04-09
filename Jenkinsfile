@@ -39,25 +39,24 @@ stages {
 	
 	               
 	
-	                set +x
+	               // set +x
 	
 	               // docker login -u='kirtikumar1982' -p='Secure+800'
 	
-	                set -x
+	              //  set -x
 	
 	                sh 'docker push kirtikumar1982/kirtikumarr/helloworld'
 	
 	                sh 'build docker image step point4 end'
 	            }
 				}
-	
+	stage('Cleanup'){
 	post {
-    //failure {
-      // notify users when the Pipeline fails
-      mail to: 'kirtikumar.ramteke@kpit.com',
-          subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-          body: "Something is wrong with ${env.BUILD_URL}"
-    //}
-  }
+  
+      		mail to: 'kirtikumar.ramteke@kpit.com',
+          	subject: "Pipeline: ${currentBuild.fullDisplayName}",
+          	body: "Something is build with ${env.BUILD_URL}"
+    	   }
+ 		 }
 	}
 }
