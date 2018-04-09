@@ -51,12 +51,18 @@ stages {
 	            }
 				}
 	stage('Cleanup'){
-	post {
+		steps{
+			sh 'email notification'
+		mail body: 'project build status',
+                     from: 'kirtikumar.ramteke@kpit.com',
+                     replyTo: 'kirtikumar.ramteke@kpit.com',
+                     subject: 'project build status',
+                     to: 'kirtikumar.ramteke@kpit.com'
   
-      		mail to: 'kirtikumar.ramteke@kpit.com',
-          	subject: "Pipeline: ${currentBuild.fullDisplayName}",
-          	body: "Something is build with ${env.BUILD_URL}"
-    	   }
+      		//mail to: 'kirtikumar.ramteke@kpit.com',
+          	//subject: "Pipeline: ${currentBuild.fullDisplayName}",
+          	//body: "Something is build with ${env.BUILD_URL}"
+		}
  		 }
 	}
 }
