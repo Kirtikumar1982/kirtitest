@@ -23,7 +23,7 @@ stages {
 	
 	stage('Cleanup'){
 		steps{
-			sh 'email notification'
+		
 		mail body: 'project build status',
                      from: 'kirtikumar.ramteke@kpit.com',
                      replyTo: 'kirtikumar.ramteke@kpit.com',
