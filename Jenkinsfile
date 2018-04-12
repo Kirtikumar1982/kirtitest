@@ -21,18 +21,7 @@ stages {
             }
         }
 	
-	stage('Cleanup'){
-		steps{
-		
-		mail body: 'project build status',
-                     from: 'kirtikumar.ramteke@kpit.com',
-                     replyTo: 'kirtikumar.ramteke@kpit.com',
-                     subject: 'project build status',
-                     to: 'kirtikumar.ramteke@kpit.com'
-  
-      		
-		}
- 		 }
+	
 	
 	
 	}
