@@ -22,7 +22,7 @@ stages {
         }
    stage('Create Docker Image') {
    
-      docker.build("Kirtikumar1982/kirtitest:${env.BUILD_NUMBER}")
+     sh 'docker.build("Kirtikumar1982/kirtitest:${env.BUILD_NUMBER}")'
     
     }
     
