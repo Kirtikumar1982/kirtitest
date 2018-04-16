@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-     sh 'docker.build("Kirtikumar1982/kirtitest:${env.BUILD_NUMBER}")'
+     sh 'docker.build(Kirtikumar1982/kirtitest:${env.BUILD_NUMBER})'
     }
     }
     }
