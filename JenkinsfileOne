@@ -21,9 +21,9 @@ stages {
             }
         }
    stage('Create Docker Image') {
-    dir('target') {
+   
       docker.build("Kirtikumar1982/kirtitest:${env.BUILD_NUMBER}")
-    }
+    
     }
     
   }
