@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-   sh 'sudo usermod -aG docker kirtikumar1982'
+   
    sh 'sudo chmod 666 /var/run/docker.sock'
    sh 'docker build -t kirtitest/microtest .'
    
