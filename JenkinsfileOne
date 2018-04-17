@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-   sh 'docker build -t Kirtikumar1982/kirtitest/helloworld:1'
+   sh 'docker build -t kirtitest/helloworld:1'
     
     }
     }
