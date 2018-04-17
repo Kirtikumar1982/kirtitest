@@ -24,7 +24,7 @@ stages {
    steps{
    node('master') {
    
-   sh 'sudo chmod 666 /var/run/docker.sock'
+   sh 'sudo -S true'
    sh 'docker build -t kirtitest/microtest .'
    
     }
