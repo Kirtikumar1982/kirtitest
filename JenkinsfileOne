@@ -24,7 +24,6 @@ stages {
    steps{
    node('master') {
    
-   sh 'sudo -S true'
    sh 'docker build -t kirtitest/microtest .'
    
     }
