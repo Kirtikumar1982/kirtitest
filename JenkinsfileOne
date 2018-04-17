@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-   sh 'docker build -t kirtitest/microtest  -f kirtitest/target/Dockerfile .'
+   sh 'docker build -t kirtitest/microtest .'
     
     }
     }
