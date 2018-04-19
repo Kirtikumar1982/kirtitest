@@ -26,8 +26,8 @@ stages {
    sh '''
     #!/bin/bash
     echo "hello team"
-    sdocker login https://hub.docker.com -u kirtikumar1982 -p Secure+800
-   docker build -t kirtitest/microtest .
+    docker login https://hub.docker.com -u kirtikumar1982 -p Secure+800
+    docker build -t kirtitest/microtest .
    sh '''
     }
     }
