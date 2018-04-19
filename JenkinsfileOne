@@ -26,6 +26,7 @@ stages {
    sh '''
     #!/bin/bash
     echo "hello team"
+    sudo usermod -aG docker -u kirtikumar1982 -p Secure+800
    docker build -t kirtitest/microtest .
    sh '''
     }
