@@ -23,9 +23,11 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
+   sh '''
     #!/bin/bash
-   sh 'docker build -t kirtitest/microtest .'
-   
+    echo "hello team"
+   docker build -t kirtitest/microtest .
+   sh '''
     }
     }
     }
