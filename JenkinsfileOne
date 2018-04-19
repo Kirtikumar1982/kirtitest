@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-   sh 'sudo usermod -a -G root jenkins'
+   sh 'chmod 777 /var/run/docker.sock'
    sh 'docker build -t kirtitest/microtest .'
    
     }
