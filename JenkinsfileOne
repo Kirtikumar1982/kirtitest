@@ -23,7 +23,7 @@ stages {
    stage('Create Docker Image') {
    steps{
    node('master') {
-   sh 'chmod 777 /var/run/docker.sock'
+    #!/bin/bash
    sh 'docker build -t kirtitest/microtest .'
    
     }
