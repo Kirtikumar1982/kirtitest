@@ -1,6 +1,7 @@
 pipeline {
     agent {
 		label 'master'
+		label 'docker'
 	}
 
 stages {
@@ -22,7 +23,7 @@ stages {
         }
    stage('Create Docker Image') {
    steps{
-   node('Docker') {
+   node('docker') {
    sh '''
     #!/bin/bash
     echo "hello team"
