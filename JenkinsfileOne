@@ -22,7 +22,7 @@ stages {
         }
    stage('Create Docker Image') {
    steps{
-   node('master') {
+   node('Docker') {
    sh '''
     #!/bin/bash
     echo "hello team"
