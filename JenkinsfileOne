@@ -23,11 +23,14 @@ stages {
         }
    stage('Create Docker Image') {
    steps{
-   node('docker') {
+   node('master') {
    sh '''
     #!/bin/bash
     echo "hello team"
     curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/kirtikumar1982/kirtitest/trigger/c639d9ba-3116-4de6-9f0a-f1047227b353/
+     set +x                  
+     docker login -u='kirtikumar1982' -p='Secure+800'                  
+     set -x
        docker build -t kirtitest/microtest .
    sh '''
     }
